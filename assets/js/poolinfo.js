@@ -62,7 +62,7 @@ function getPoolStats(poolID, poolURL) {
 
         updateText(poolID + '_poolHashrate', poolHashrate);
         updateText(poolID + '_poolMiners', poolMiners);
-	updateText(poolID + '_poolWorkers', poolWorkers);
+	    updateText(poolID + '_poolWorkers', poolWorkers);
         updateText(poolID + '_networkHashrate', networkHashrate);
         updateText(poolID + '_hashPower', hashPower);
         updateText(poolID + '_blocksFound', blocksFound);
@@ -75,6 +75,7 @@ function updatePools() {
     getPoolStats('bitcoinnova', 'https://superblockchain.con-ip.com:8132');
     getPoolStats('zent', 'https://superblockchain.con-ip.com:8135');
     getPoolStats('qwertycoin', 'https://superblockchain.con-ip.com:8333');
+    getPoolStats('goodness', 'https://superblockchain.con-ip.com:8149');
     getPoolStats('pengolin', 'https://superblockchain.con-ip.com:9990');
     getPoolStats('zentcashmerged', 'https://superblockchain.con-ip.com:9992');
 
