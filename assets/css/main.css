@@ -45,6 +45,28 @@ body {
 	line-height: 1;
 }
 
+.faucet {
+	padding: 1.75em 1.75em .1em 1.75em;
+  background-color: #353849;
+  border-radius: 5px;
+  margin: 1.5em 1em 1.5em 1em;
+}
+
+.faucet .image {
+	border-radius: 5px 5px 0 0;
+	display: block;
+	margin-bottom: 1.75em;
+	margin-left: -1.75em;
+	margin-top: -1.75em;
+	position: relative;
+	width: calc(100% + 3.5em);
+}
+
+.faucet .image img {
+	border-radius: 5px 5px 0 0;
+	width: 100%;
+}
+
 .webminer-title {
 	margin-left:-1.5em;
 }
@@ -4167,6 +4189,28 @@ input, select, textarea {
 
 		#footer .inner {
 			padding: 2em 1.5em 0.1em 1.5em ;
+		}
+
+	}
+
+	@media (min-width: 330px) and (max-width: 410px) {
+
+		h3.major{
+			font-size: 1em;
+		}
+	}
+
+	@media (min-width: 411px) and (max-width: 510px) {
+
+		h3.major{
+			font-size: 1.3em;
+		}
+
+	}
+	@media (min-width: 511px) and (max-width: 736px) {
+
+		h3.major{
+			font-size: 1.5em;
 		}
 
 	}
