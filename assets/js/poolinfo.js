@@ -44,17 +44,26 @@ function getPoolStats(poolID, poolURL) {
                 algorithm = 'Cryptonight Light';
             }
         }
-	else if (cnAlgorithm == "cryptonight_pico") {
+	    else if (cnAlgorithm == "cryptonight_pico") {
             algorithm = 'Cryptonight Turtle';
         }
         else if (cnAlgorithm == "cryptonight_heavy") {
             algorithm = 'Cryptonight Heavy';
+        }
+        else if (cnAlgorithm == "argon2") {
+            if (cnVariant === 1) {
+                algorithm = 'Argon2id Pengo';
+            } else {
+                algorithm = 'Argon2id Chukwa';
+            }    
         }
         else {
             if (cnVariant === 1) {
                 algorithm = 'Cryptonight v7';
             } else if (cnVariant === 3) {
                 algorithm = 'Cryptonight v7';
+            } else if (cnVariant === 11) {
+                algorithm = 'Cryptonight Conceal';
             } else {
                 algorithm = 'Cryptonight';
             }
@@ -72,13 +81,16 @@ function getPoolStats(poolID, poolURL) {
 
 // Update pools
 function updatePools() {
-    getPoolStats('bitcoinnova', 'https://superblockchain.con-ip.com:8132');
-    getPoolStats('zent', 'https://superblockchain.con-ip.com:8135');
-    getPoolStats('qwertycoin', 'https://superblockchain.con-ip.com:8333');
-    getPoolStats('goodness', 'https://superblockchain.con-ip.com:8149');
-    getPoolStats('pengolin', 'https://superblockchain.con-ip.com:9990');
-    getPoolStats('zentcashmerged', 'https://superblockchain.con-ip.com:9992');
-
+    getPoolStats('bitcoinnova', 'https://superblockchain.con-ip.com:8132'); // Server 1
+    getPoolStats('zent', 'https://superblockchain.con-ip.com:8135'); // Server 1
+    getPoolStats('ultranote', 'https://superblockchain.con-ip.com:8137'); // Server 1
+    // getPoolStats('ultranotei', 'https://superblockchain.con-ip.com:8139'); // Server 1
+    getPoolStats('cirquity', 'https://superblockchain.con-ip.com:8143'); // Server 1
+    getPoolStats('wechain', 'https://superblockchain.con-ip.com:8145'); // Server 1
+    getPoolStats('securecash', 'https://superblockchain.con-ip.com:8147'); // Server 1
+    getPoolStats('goodness', 'https://superblockchain.con-ip.com:8149'); // Server 1
+    getPoolStats('nibble', 'https://superblockchain.con-ip.com:8151'); // Server 2
+    getPoolStats('qwertycoin', 'https://superblockchain.con-ip.com:8333'); // Server 2
 }
 
 // Initialize

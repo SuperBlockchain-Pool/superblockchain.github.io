@@ -67,6 +67,29 @@ body {
 	width: 100%;
 }
 
+.exchange {
+	padding: 1.75em 1.75em .1em 1.75em;
+  background-color: #353849;
+  border-radius: 5px;
+  margin: 1.5em 1em 1.5em 1em;
+}
+
+.exchange .image {
+	border-radius: 5px 5px 0 0;
+	display: block;
+	margin-bottom: 1.75em;
+	margin-left: -1.75em;
+	margin-top: -1.75em;
+	position: relative;
+	width: calc(100% + 3.5em);
+}
+
+.exchange .image img {
+	border-radius: 5px 5px 0 0;
+	width: 100%;
+}
+
+
 .webminer-title {
 	margin-left:-1.5em;
 }

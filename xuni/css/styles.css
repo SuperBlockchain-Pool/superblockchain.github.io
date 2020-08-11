@@ -1,0 +1,474 @@
+html 
+{
+  position: relative;
+  min-height: 100%;
+}
+body 
+{
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 14px;
+    background: #454545;
+    
+    /* Margin bottom by footer height (sticky)  */
+    margin-bottom: 80px;
+}
+.select_versions body
+{
+    background: #378e95;
+}
+.backgroundColor body 
+{
+    background: #16a085; /* Our flat color for background */
+}
+.backgroundVideo body
+{
+    background: #000;
+}
+.backgroundImage body 
+{
+    /* Full background image */
+    background: url('../images/bg1.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+h1, h2, h3, h4, h5, h6 
+{
+    font-weight: 300;
+    line-height: normal;
+}
+h1
+{
+    font-size: 45px;
+}
+h1.logo 
+{
+    font-size: 45px;
+    padding-top: 100px;
+    font-family: 'Lemon', cursive;
+}
+h2.logo 
+{
+    font-family: 'Lemon', cursive;
+}
+h2
+{
+    font-size: 20px;
+}
+h3.logo 
+{
+    font-family: 'Lemon', cursive;
+}
+h3
+{
+    font-size: 17px;
+}
+a 
+{
+    color: #fff;
+    text-decoration: none;
+}
+a:hover 
+{
+    text-decoration: none;
+    color: #f0f0f0;
+}
+a, button
+{
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+/*********************************/
+/*********** Countdown ***********/
+/*********************************/ 
+#countdown 
+{
+    
+}
+#countdown .countdown_group
+{
+    display: inline-block;
+    padding: 0px 20px;
+}
+#countdown .countdown_group .countdown_value 
+{
+    font-size: 60px;
+    display: block;
+}
+#countdown .countdown_group .countdown_help 
+{
+    font-size: 15px;
+    display: block;
+}
+
+
+/*********************************/
+/******** Form newsletter ********/
+/*********************************/ 
+#form_newsletter button
+{
+    background-color: #ffffff;
+    background: rgba(255,255,255,0.6);
+    border: 1px solid #ffffff;
+    color: #545454;
+}
+#form_newsletter button:hover
+{
+    background-color: #ffffff;
+    background: rgba(255,255,255,1);
+    color: #545454;
+}
+
+#form_newsletter_result .alert 
+{
+    margin-top: 10px;
+    border-radius: 0px;
+    margin-bottom: 0px;
+}
+#form_newsletter_result .alert.alert-danger
+{
+    background-color: #c0392b;
+    border: none;
+    color: #fff;
+}
+#form_newsletter_result .alert.alert-success
+{
+    background-color: #16a085;
+    border: none;
+    color: #fff;
+}
+.form-control,
+.input-group-lg .form-control
+{
+    border-radius: 0px;
+}
+.input-group-lg .input-group-btn .btn
+{
+    border-radius: 0px;
+}
+.form-control
+{
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+}
+.form-control:focus 
+{
+  border-color: #ffffff;
+  outline: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+
+/* Sticky footer */
+#footer 
+{
+    color: #ffffff;
+    position: absolute;
+    overflow: hidden;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    z-index: 100;
+    padding-bottom: 20px;
+}
+
+/* Footer gradient */
+.backgroundImage #footer, 
+.backgroundSlider #footer,
+.backgroundVideo #footer
+{
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* W3C */
+}
+
+#footer p 
+{
+    font-size: 15px;
+    margin: 0px;
+}
+
+#footer a 
+{
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.slide.cycle-slide
+{
+    width: 100%;
+}
+
+/*********************************/
+/*********** About us ************/
+/*********************************/
+#about_us 
+{
+    display: none;
+    background: #ffffff;
+    background: rgba(255,255,255, 0.95);
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    width: 100%;
+    min-height: 100%;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    color: #545454;
+    text-align: center;
+    padding: 100px 10px;
+}
+#about_us h1 
+{
+    margin-bottom: 20px;
+}
+#about_us p 
+{
+    margin-bottom: 10px;
+}
+
+
+/*********************************/
+/************* .btn **************/
+/*********************************/                  
+.btn 
+{
+    border-radius: 0px;
+}
+.btn-transparent 
+{
+    color: #ffffff;
+    background: transparent;
+    border: 1px solid #ffffff;
+}
+.btn-transparent:hover,
+.btn-transparent:focus,
+.btn-transparent:active,
+.btn-transparent.active 
+{
+  color: #545454;
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
+
+.btn-facebook:hover,
+.btn-facebook:focus,
+.btn-facebook:active,
+.btn-facebook.active 
+{
+    color: #ffffff;
+    background-color: #3B5998;
+    border-color: #3B5998;
+}
+
+.btn-twitter:hover,
+.btn-twitter:focus,
+.btn-twitter:active,
+.btn-twitter.active
+{
+    color: #ffffff;
+    background-color: #00aced;
+    border-color: #00aced;
+}
+
+.btn-googleplus:hover,
+.btn-googleplus:focus,
+.btn-googleplus:active,
+.btn-googleplus.active
+{
+    color: #ffffff;
+    background-color: #dd4b39;
+    border-color: #dd4b39;
+}
+
+.btn-youtube:hover,
+.btn-youtube:focus,
+.btn-youtube:active,
+.btn-youtube.active
+{
+    color: #ffffff;
+    background-color: #bb0000;
+    border-color: #bb0000;
+}
+
+.btn-linkedin:hover,
+.btn-linkedin:focus,
+.btn-linkedin:active,
+.btn-linkedin.active
+{
+    color: #ffffff;
+    background-color: #007bb6;
+    border-color: #007bb6;
+}
+
+.btn-instagram:hover,
+.btn-instagram:focus,
+.btn-instagram:active,
+.btn-instagram.active
+{
+    color: #ffffff;
+    background-color: #517fa4;
+    border-color: #517fa4;
+}
+
+.btn-pinterest:hover,
+.btn-pinterest:focus,
+.btn-pinterest:active,
+.btn-pinterest.active
+{
+    color: #ffffff;
+    background-color: #cb2027;
+    border-color: #cb2027;
+}
+
+/*********************************/
+/********* Placeholder ***********/
+/*********************************/  
+.form-control::-webkit-input-placeholder 
+{
+   color: #ffffff;
+}
+
+.form-control:-moz-placeholder 
+{
+   color: #ffffff;  
+}
+
+.form-control::-moz-placeholder 
+{  
+   color: #ffffff;  
+}
+
+.form-control:-ms-input-placeholder 
+{  
+   color: #ffffff;  
+}
+
+/*********************************/
+/************ Others *************/
+/*********************************/ 
+.video-btns
+{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+#controlBar_bgndVideo {
+    display: none !important;
+}
+
+.YTPOverlay.raster {
+    background: #000;
+    opacity: 0.2;
+}
+
+.version_theme 
+{
+    margin-bottom: 20px;
+}
+
+.version_theme a 
+{
+    display: block;
+}
+
+.version_theme a img 
+{
+    max-width: 100%;
+}
+.version_theme a h2 
+{
+    margin-bottom: 20px;
+}
+
+.section{
+    padding: 10px 0px;
+}
+
+#contact 
+{
+    margin: 10px 0px;
+}
+
+#contact a:first-child 
+{
+    margin-right: 20px;
+}
+
+/*********************************/
+/************ @media *************/
+/*********************************/
+@media (max-width:991px)
+{
+    .backgroundVideo body
+    {
+        /* Full background image because video can't autoplay on mobile & tablet devices */
+        background: url('../images/bg1.jpg') no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    
+    .video-btns
+    {
+        position: relative;
+        top: 10px;
+        left: auto;
+        right: auto;
+        
+        display: none;
+    }
+}
+@media (max-width:767px)
+{
+    h1.logo 
+    {
+        padding-top: 10px;
+        font-size: 25px;
+    }
+
+    #countdown .countdown_group
+    {
+        padding: 0px 10px;
+    }
+    
+    #countdown .countdown_group .countdown_value 
+    {
+        font-size: 30px;
+    }
+    
+    #footer p 
+    {
+        font-size: 11px;
+    }
+    
+    #about_us 
+    {
+        padding: 20px 10px;
+    }
+    
+    #about_us p 
+    {
+        text-align: left;
+    }
+    
+    
+}
