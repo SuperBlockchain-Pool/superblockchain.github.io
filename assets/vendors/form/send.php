@@ -27,7 +27,7 @@ echo "<script>alert('Fields marked with * are required.');location.href ='javasc
 
     $mail->From     = $Email;
     $mail->FromName = $Name; 
-    $mail->AddAddress("superblockchain2018@gmail.com"); // Address to which the messages will arrive.
+    $mail->AddAddress("EMAIL"); // Address to which the messages will arrive.
 
 // Here are the data that will appear in the email you receive.
 
@@ -43,8 +43,8 @@ echo "<script>alert('Fields marked with * are required.');location.href ='javasc
     $mail->IsSMTP(); 
     $mail->Host = "ssl://smtp.gmail.com:465";
     $mail->SMTPAuth = true; 
-    $mail->Username = "superblockchain2018@gmail.com";
-    $mail->Password = ""; 
+    $mail->Username = "EMAIL";
+    $mail->Password = "PASSWORD"; 
 
     if ($mail->Send())
     echo "<script>alert('Form sent successfully, we will respond as soon as possible.');location.href ='javascript:history.back()';</script>";

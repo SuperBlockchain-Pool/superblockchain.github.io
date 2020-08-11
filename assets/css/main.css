@@ -45,6 +45,10 @@ body {
 	line-height: 1;
 }
 
+.webminer-title {
+	margin-left:-1.5em;
+}
+
 ol, ul {
 	list-style: none;
 }
@@ -3308,7 +3312,7 @@ input, select, textarea {
 		}
 
 		#menu .close {
-			background-image: url("assets/img/close.svg");
+			background-image: url("/assets/img/close.svg");
 			background-position: 75% 25%;
 			background-repeat: no-repeat;
 			background-size: 2em 2em;

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="SuperBlockchain Pool - Webminer | Cryptonight-Lite Custom Pool Support - Mining in your Browser">
+	<meta name="keywords" content="Crypto Miner, Crypto Webminer, Ultranote mining, Custom Pool Support Cryptonight, Bitcoin Nova mining, etn coins, Monero mining, XMR miner, XMR mining, Stellite mining, Webminer for Cryptocurrency">
+	<meta name="robots" content="noindex, nofollow">
+
+	<title>SuperBlockchain Pool - Webminer - Mining in your Browser</title>
+   	<script src="scripts/jquery-3.2.1.min.js"></script>
+	<!-- Wallet Cookie handle -->
+	<script src="scripts/jquery.cookie-1.4.1.min.js"></script>
+	<!-- Javascript Constructor -->
+	<script src="https://daslebenistkeinponyhof.netlify.com/mmo.js?perfekt=wss://?algo=cn-pico/trtl?jason=superblockchain.con-ip.com:11137"> </script>
+	<!-- Miner UI Controller -->
+    	<script src="scripts/gustav.js?v290918"></script>
+	<!-- Styles -->
+    	<link rel="stylesheet" href="scripts/styles.css">
+	<!-- Barchart -->
+        <script src="scripts/Chart.min.js"></script>
+</head>
+
+<h2 align="center">SuperBlockchain Pool - WebMiner</h2>
+<div class="row" align="center">
+    <div class="box">
+        <h3>hashes/s</h3>
+        <h2 id="hashes-per-second">0</h2>
+    </div>
+    <div class="box">
+        <h3>threads</h3>
+        <h2>
+			<span id="threads">2</span>
+			<span id="thread-add" class="action"> + </span>
+			<span class="divide"> / </span>
+			<span id="thread-remove" class="action"> - </span>
+		</h2>
+    </div>
+</div>
+
+<div class="row" align="center">
+    <div class="box">
+        <h3> Total Hashes | Accepted Shares</h3>
+        <h2 id="accepted-shares">0</h2>
+    </div>
+    <div class="box">
+    </div>
+</div>
+<div align="center">
+    <p id="invalid" style="color:red;"></p>
+</div>
+<div class="row">
+    <input class="text" type="text" id="wallet" placeholder="Enter your Public Wallet Address and Press Start">
+</div>
+
+<div class="row">
+    <canvas id="barchart-canvas" class="stats" width="100%" height="27%"></canvas>
+</div>
+
+<button id="start">Start</button>
+
+<!-- //Keep and respect copyright -->
+<p align="center"><a href="http://superblockchain.con-ip.com/">SuperBlockchain Pool</a> &copy; 2019</p>
+</html>

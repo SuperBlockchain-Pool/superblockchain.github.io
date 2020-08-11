@@ -39,10 +39,13 @@ function getPoolStats(poolID, poolURL) {
             if (cnVariant === 1) {
                 algorithm = 'Cryptonight Light v7';
             } else if (cnVariant === 2) {
-                algorithm = 'Cryptonight Light';
+                algorithm = 'Cryptonight Light v7';
             } else {
                 algorithm = 'Cryptonight Light';
             }
+        }
+	else if (cnAlgorithm == "cryptonight_pico") {
+            algorithm = 'Cryptonight Turtle';
         }
         else if (cnAlgorithm == "cryptonight_heavy") {
             algorithm = 'Cryptonight Heavy';
@@ -72,8 +75,8 @@ function updatePools() {
     getPoolStats('bitcoinnova', 'https://superblockchain.con-ip.com:8132');
     getPoolStats('zent', 'https://superblockchain.con-ip.com:8135');
     getPoolStats('qwertycoin', 'https://superblockchain.con-ip.com:8333');
-    getPoolStats('ultranote', 'https://superblockchain.con-ip.com:8137');
-    getPoolStats('xunbtn', 'https://superblockchain.con-ip.com:8139');
+    getPoolStats('pengolin', 'https://superblockchain.con-ip.com:9990');
+    getPoolStats('zentcashmerged', 'https://superblockchain.con-ip.com:9992');
 
 }
 

@@ -1,0 +1,30 @@
+[
+  {
+    "name": "--- Select Currency ---",
+    "filename": "select-currency"
+  },
+  {
+    "name": "Bitcoin Nova",
+    "filename": "btn-bitcoinnova"
+  },  
+  {
+    "name": "GoodNess",
+    "filename": "gns-goodness"
+  },
+  {
+    "name": "Qwertycoin",
+    "filename": "qwc-qwertycoin"
+  },
+  {
+    "name": "Zent Cash",
+    "filename": "ztc-zentcash"
+  },
+  {
+    "name": "UltraNote",
+    "filename": "xun-ultranote"
+  },
+  {
+    "name": "PengolinCoin",
+    "filename": "pgo-pengolincoin"
+  }
+]

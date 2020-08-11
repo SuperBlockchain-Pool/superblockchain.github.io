@@ -1,0 +1,9 @@
+User-Agent: *
+Disallow: assets/webfonts/
+Disallow: assets/js/
+Disallow: assets/vendors/
+Disallow: assets/sesiones/
+Disallow: assets/sass/
+Disallow: assets/img/
+Disallow: assets/css/
+Sitemap: https://superblockchain.con-ip.com/sitemap.xml
