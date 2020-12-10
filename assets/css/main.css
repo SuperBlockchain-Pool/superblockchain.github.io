@@ -67,6 +67,30 @@ body {
 	width: 100%;
 }
 
+.wallet {
+	padding: 1.75em 1.75em .1em 1.75em;
+  background-color: #353849;
+  border-radius: 5px;
+  margin: 1.5em 1em 1.5em 1em;
+}
+
+.wallet .image {
+	border-radius: 5px 5px 0 0;
+	display: block;
+	margin-bottom: 1.75em;
+	margin-left: -1.75em;
+	margin-top: -1.75em;
+	position: relative;
+	width: calc(100% + 3.5em);
+}
+
+.wallet .image img {
+	border-radius: 5px 5px 0 0;
+	width: 100%;
+	margin: -29% -9% -24% 1%;
+  padding: 10%;
+}
+
 .exchange {
 	padding: 1.75em 1.75em .1em 1.75em;
   background-color: #353849;
