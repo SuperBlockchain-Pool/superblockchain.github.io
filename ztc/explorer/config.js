@@ -1,4 +1,5 @@
-var api = 'https://seedpro2.zent.cash';
+// var api = 'https://seedpro3.zent.cash';
+var api = 'https://superblockchain.con-ip.com/api/ztc';
 var donationAddress = "";
 var blockTargetInterval = 60; // enter the block interval in seconds
 var coinUnits = 100;  // enter in the amount of atomic units in 1 coin, eg. 100 shells = 1 ZTC
