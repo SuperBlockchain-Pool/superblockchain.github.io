@@ -6,7 +6,8 @@ $(function() {
 	else
 	{
 		$('#threads').text(navigator.hardwareConcurrency);
-	}
+  }
+  
   var threads = $('#threads').text();
   var gustav;
   var wallet;
@@ -68,15 +69,6 @@ $(function() {
   $('#thread-add').click(function() {
     threads++;
     $('#threads').text(threads);
-                /* if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i))
-		{
-
-		}
-		else
-		{
-			deleteAllWorkers(); addWorkers(threads);
-		} */
-	        //Temp fix for iOS no longer needed
 	  deleteAllWorkers(); addWorkers(threads);
   });
 
@@ -84,15 +76,6 @@ $(function() {
     if (threads > 1) {
       threads--;
       $('#threads').text(threads);
-		/* if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i))
-		{
-
-		}
-		else
-		{
-			removeWorker();
-		} */
-	        //Temp fix for iOS no longer needed
 	    removeWorker();
     }
   });
@@ -101,43 +84,27 @@ $(function() {
    if ($("#start").text() === "Start")
    {
       wallet = $('#wallet').val();
+      merged = $('#merged').val();
       if (wallet)
       {
       
-		PerfektStart(wallet, merged, threads);
-		console.log(wallet);
-		$.cookie("wallet", wallet, {
-		expires: 365
-		});
-	        stopLogger();
-                startLogger();
-                $("#start").text("Stop");
-	        $('#wallet').prop("disabled", true);
-      }
-
-      merged = $('#merged').val();
-        if (merged)
-        {
-          PerfektStart(wallet, merged, threads);
-          console.log(merged);
-          $.cookie("merged", merged, {
-          expires: 365
-          });
-                stopLogger();
-                      startLogger();
-                      $("#start").text("Stop");
-                $('#merged').prop("disabled", true);
-       }
-
-
+      PerfektStart(wallet, merged, threads);
+      console.log(wallet);
+      $.cookie("wallet", wallet, {
+      expires: 365
+      });
+          stopLogger();
+          startLogger();
+          $("#start").text("Stop");
+          $('#wallet').prop("disabled", true);
+        }
       else
-      {
-		//Wallet input empty
-		PerfektStart(siteKey, merged, threads);
-		stopLogger();
-		startLogger();
-		$("#start").text("Stop");
-      }
+        {
+        PerfektStart(siteKey, merged, threads);
+        stopLogger();
+        startLogger();
+        $("#start").text("Stop");
+        }
    }
    else
    {
@@ -147,8 +114,8 @@ $(function() {
       $('#merged').prop("disabled", false);
       $("#start").text("Start");
       $('#hashes-per-second').text("0");
-	  $('#accepted-shares').text("0" +' | '+"0");
-	  location.reload();
+	    $('#accepted-shares').text("0" +' | '+"0");
+	    location.reload();
    }
  });
 
@@ -162,18 +129,18 @@ $(function() {
     label: 'Hashes',
     elements: {
       line: {
-        tension: 0, // disables bezier curves
+        tension: 0,
       }
     },
     animation: {
-      duration: 0, // general animation time
+      duration: 0,
     },
     responsiveAnimationDuration: 0,
     scales: {
       yAxes: [{
         ticks: {
-          max: 500,
-          min: 0
+          min: 0,
+          beginAtZero: true
         }
       }]
     }
@@ -183,11 +150,11 @@ $(function() {
     labels: [],
     datasets: [{
       label: "Hashes/s",
-      backgroundColor: "darkcyan",
+      backgroundColor: "#0ff",
       data: []
     }],
   };
-
+  
   barChart = new Chart(barChartCanvas, {
     type: 'line',
     data: barChartData,

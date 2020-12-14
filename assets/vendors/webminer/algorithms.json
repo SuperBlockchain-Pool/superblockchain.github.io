@@ -12,19 +12,27 @@
     "filename": "gns-goodness"
   },
   {
+    "name": "Wechain",
+    "filename": "wxtc-wechain"
+  },
+  {
+    "name": "SecureCash",
+    "filename": "scsx-securecash"
+  },
+ {
     "name": "Qwertycoin",
     "filename": "qwc-qwertycoin"
+  },
+ {
+    "name": "Cirquity",
+    "filename": "cirq-cirquity"
   },
   {
     "name": "Zent Cash",
     "filename": "ztc-zentcash"
   },
-  {
-    "name": "UltraNote",
-    "filename": "xun-ultranote"
-  },
-  {
-    "name": "PengolinCoin",
-    "filename": "pgo-pengolincoin"
+ {
+    "name": "Nibble",
+    "filename": "nbxc-nibble"
   }
 ]
