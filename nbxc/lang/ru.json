@@ -6,7 +6,7 @@
     "poolBlocks": "Блоки пула",
     "settings": "Настройки",
     "faq": "FAQ",
-    "telegram": "Группа Telegram",
+    "telegram": "Telegram",
     "discord": "Discord",
     "contactUs": "Почта",
     
@@ -15,6 +15,7 @@
     "you": "Вы",
     "statsUpdated": "Статистика обновлена",
     
+    "infoAlert" : "",
     "poolHashrate": "Скорость пула",
     "currentEffort": "Сложность раунда",
     "networkHashrate": "Скорость сети",
@@ -23,6 +24,7 @@
     "networkLastReward": "Последнее вознаграждение",
     "poolMiners": "Пользователи пула",
     "poolFee": "Комиссия пула",
+    "finderReward": "Finder Reward",
     
     "minerStats": "Ваша статистика и история платежей",
     "workerStats": "Статистика ферм",

@@ -3,7 +3,6 @@
 <head lang="en">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
-    <title>Superblockchain Pool - Admin Panel Zent Cash</title>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.6.3/jquery.timeago.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
@@ -11,6 +10,7 @@
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="icon" type="image/ico" href="/ztc/favicon.ico"/>
+    <title>SuperBlockchain Pool - Admin Panel - Zent Cash</title>
 </head>
 <body>
 
@@ -18,7 +18,7 @@
 
     <!-- Navigation -->
     <div class="nav-side-menu">
-        <div class="brand"><a>Admin Panel</a></div>
+        <div class="brand"><a href="/ztc">Admin Panel</a></div>
         <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
         <div class="menu-list">
             <ul id="menu-content" class="menu-content collapsed out">
@@ -42,14 +42,14 @@
                 <li><a class="hot_link" data-page="admin/tools.html" href="#tools">
                     <i class="fa fa-gears"></i> Tools
                 </a></li>
-		
-		<li><a class="hot_link" target="_blank" href="/ztc">
-		    <i class="fa fa-gears"></i> Go Dashboard
-		</a></li>
 
+                <li><a class="hot_link" target="_blank" href="/ztc">
+                    <i class="fa fa-gears"></i> Go Dashboard
+                </a></li>
+        
                 <li class="sign-out"><a class="hot_link" href="/ztc">
                     <i class="fa fa-sign-out"></i> Return to Pool
-                </a></li>
+                </a></li>        
 
             </ul>
         </div>
@@ -63,13 +63,12 @@
 
 </div>
 
-	<!-- Footer -->
-	<footer>
-		<div class="text-muted">
-        		<span>Powered By SuperBlockchain Pool</span>
-			<span> - </span>Version: <span id="poolVersion"></span>
-    		</div>
-	</footer>
+<!-- Footer -->
+<footer>
+    <div class="text-muted">
+        <span>Powered By SuperBlockchain Pool - Version: <span id="poolVersion"></span></span>
+    </div>
+</footer>
 
 <!-- Javascript -->
 <script src="config.js"></script>

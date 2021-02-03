@@ -6,7 +6,7 @@
     "poolBlocks": "Blocs de la Pool",
     "settings": "Ajustaments",
     "faq": "FAQ",
-    "telegram": "Grup de Telegram",
+    "telegram": "Telegram",
     "discord": "Discord",
     "contactUs": "Contactar",
     "network": "Xarxa",
@@ -14,6 +14,7 @@
     "you": "La teva taxa",
     "statsUpdated": "Estadístiques actualitzades",
     
+    "infoAlert" : "",
     "poolHashrate": "Taxa de la Pool (hash)",
     "currentEffort": "Esforç actual",
     "networkHashrate": "Taxa de la Xarxa (hash)",
@@ -22,6 +23,7 @@
     "networkLastReward": "Última recompensa",
     "poolMiners": "Miners connectats",
     "poolFee": "Tarifa de la Pool",
+    "finderReward": "Recompensa del Cercador",
     
     "minerStats": "Les teves estadístiques i historial de pagaments",
     "workerStats": "Estadístiques personals",

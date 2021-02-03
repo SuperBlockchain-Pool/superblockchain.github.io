@@ -6,7 +6,7 @@
     "poolBlocks": "Bloques de la Pool",
     "settings": "Ajustes",
     "faq": "FAQ",
-    "telegram": "Grupo de Telegram",
+    "telegram": "Telegram",
     "discord": "Discord",
     "contactUs": "Contacto",
     
@@ -14,8 +14,8 @@
     "pool": "Pool",
     "you": "Tú Tasa",
     "statsUpdated": "Estadísticas actualizadas",
-    "infoAlert": "NOTICIAS:",
     
+    "infoAlert" : "",
     "poolHashrate": "Tasa Pool (hash)",
     "currentEffort": "Ronda actual",
     "networkHashrate": "Tasa Red (hash)",
@@ -24,6 +24,7 @@
     "networkLastReward": "Última recompensa",
     "poolMiners": "Mineros conectados",
     "poolFee": "Tarifa Pool",
+    "finderReward": "Buscador Recompensa",
     
     "minerStats": "Tus estadísticas e historial de pagos",
     "workerStats": "Estadísticas personales",
@@ -103,7 +104,7 @@
     "download": "Descargar",
     "showConfig": "Ver más",
 
-    "market": "Mercado / Calculadora",
+    "market": "Calculadora / Mercado",
     "loadingMarket": "Cargando precios del mercado",
     "priceIn": "Precio en",
     "hashPer": "Hash/",

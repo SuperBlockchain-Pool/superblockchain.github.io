@@ -376,13 +376,9 @@ currentPage = {
                 algorithm = 'CryptoNight Lite';
                 xmrstakAlgo = 'cryptonight_lite';
             }
-        } else if (cnAlgorithm == "cryptonight_pico" || cnAlgorithm == "cryptonight-turtle") {
-            if (cnAlgorithm == "cryptonight-turtle" && cnVariant === 2) {
-                algorithm = 'CryptoNight Ultra v2';
-            } else {
-                algorithm = 'CryptoNight Turtle';
-                xmrstakAlgo = 'cryptonight_turtle';
-            }
+        } else if (cnAlgorithm == "cryptonight_pico") {
+            algorithm = 'CryptoNight Turtle';
+            xmrstakAlgo = 'cryptonight_turtle';
         } else if (cnAlgorithm == "cryptonight_heavy") {
             if (cnVariant === 1) {
                 algorithm = 'CryptoNight Haven';
@@ -414,8 +410,8 @@ currentPage = {
                 algorithm = 'CryptoNight v8 Half';
                 xmrstakAlgo = 'cryptonight_v8_half';
             } else if (cnVariant === 11) {
-                algorithm = 'CryptoNight Conceal';
-                xmrstakAlgo = 'cryptonight_conceal';
+                algorithm = 'CryptoNight GPU';
+                xmrstakAlgo = 'cryptonight_gpu';
             } else if (cnVariant === 13) {
                 algorithm = 'CryptoNight R';
                 xmrstakAlgo = 'cryptonight_r';
@@ -428,6 +424,9 @@ currentPage = {
             } else if (cnVariant === 16) {
                 algorithm = 'CryptoNight v8 Double';
                 xmrstakAlgo = 'cryptonight_v8_double';
+            } else if (cnVariant === 17) {
+                algorithm = 'CryptoNight Conceal';
+                xmrstakAlgo = 'cryptonight_conceal';
             } else {
                 algorithm = 'CryptoNight';
                 xmrstakAlgo = 'cryptonight';

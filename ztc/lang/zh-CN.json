@@ -6,7 +6,7 @@
     "poolBlocks": "池中区块",
     "settings": "设置",
     "faq": "常见问题",
-    "telegram": "Telegram群组",
+    "telegram": "Telegram",
     "discord": "Discord",
     "contactUs": "联系方式",
     
@@ -15,6 +15,7 @@
     "you": "用户",
     "statsUpdated": "数据更新",
     
+    "infoAlert" : "",
     "poolHashrate": "矿池算力",
     "currentEffort": "当前效益",
     "networkHashrate": "全网算力",
@@ -23,6 +24,7 @@
     "networkLastReward": "上次收益",
     "poolMiners": "在线矿工",
     "poolFee": "矿池税",
+    "finderReward": "Finder奖励",
     
     "minerStats": "用户数据及支付历史",
     "workerStats": "设备数据",

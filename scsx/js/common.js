@@ -1778,8 +1778,8 @@ function workerstats_FetchAddressStats(longpoll, stats, api, xhrAddressPoll){
 
             let share_pct = userRoundHashes * 100 / poolRoundHashes;
             let score_pct = userRoundScore * 100 / poolRoundScore;
-            updateText(`yourRoundShareProportion${stats.config.coin}`, isNaN(share_pct) ? 0.0 : Math.round(share_pct * 1000) / 1000);
-            updateText(`yourRoundScoreProportion${stats.config.coin}`, isNaN(score_pct) ? 0.0 : Math.round(score_pct * 1000) / 1000);
+            updateText(`yourRoundShareProportion${stats.config.coin}`, Math.round(share_pct * 1000) / 1000);
+            updateText(`yourRoundScoreProportion${stats.config.coin}`, Math.round(score_pct * 1000) / 1000);
             if (!lastStats.config.slushMiningEnabled) {
                 $(`#slush_round_info${stats.config.coin}`).hide();
             }
@@ -2110,40 +2110,67 @@ workerstats methods
 */
 
 let home_GraphSettings = {
-    type: 'line',
-    width: '100%',
-    height: '140',
-    lineColor: '#03a9f4',
-    fillColor: 'rgba(3, 169, 244, .4)',
-    spotColor: null,
-    minSpotColor: null,
-    maxSpotColor: null,
-    highlightLineColor: '#236d26',
-    spotRadius: 3,
-    chartRangeMin: 0,
-    drawNormalOnTop: false,
-    tooltipFormat: '<b>{{y}}</b> &ndash; {{offset:names}}'
+	type: 'line',
+	width: '100%',
+	height: '140',
+	lineColor: '#03a9f4',
+	fillColor: 'rgba(3, 169, 244, .4)',
+	spotColor: null,
+	minSpotColor: null,
+	maxSpotColor: null,
+	highlightLineColor: '#236d26',
+	spotRadius: 3,
+	chartRangeMin: 0,
+	drawNormalOnTop: false,
+	tooltipFormat: '<b>{{y}}</b> &ndash; {{offset:names}}'
 };
 
-function home_CreateCharts(data) {
-    if (data.hasOwnProperty("charts")) {
-        var graphData = {
-            hashrate: home_GetGraphData(data.charts.hashrate),
-            diff: home_GetGraphData(data.charts.difficulty),
-            miners: home_GetGraphData(data.charts.miners),
-            workers: home_GetGraphData(data.charts.workers)
-        };
+function home_CreateCharts (data) {
+	if (data.hasOwnProperty("charts")) {
+		var graphData = {
+			hashrate: {
+				data: [home_GetGraphData(data.charts.hashrate), home_GetGraphData(data.charts.hashrateSolo)],
+				options: {
+					lineColor: 'orange'
+				}
+			},
+			diff: {
+				data: [home_GetGraphData(data.charts.difficulty)]
+			},
+			miners: {
+				data: [home_GetGraphData(data.charts.miners), home_GetGraphData(data.charts.minersSolo)],
+				options: {
+					lineColor: 'orange'
+				}
+			},
+			workers: {
+				data: [home_GetGraphData(data.charts.workers), home_GetGraphData(data.charts.workersSolo)],
+				options: {
+					lineColor: 'orange'
+				}
+			},
+		};
 
-        for(var graphType in graphData) {
-            if(graphData[graphType].values.length > 1) {
-                var settings = jQuery.extend({}, home_GraphSettings);
-                settings.tooltipValueLookups = {names: graphData[graphType].names};
-                var $chart = $('[data-chart=' + graphType + '] .chart');
-                $chart.closest('.poolChart').show();
-                $chart.sparkline(graphData[graphType].values, settings);
-            }
-        }
-    }
+		for (var graphType in graphData) {
+			if (graphData[graphType].data[0].values.length > 1) {
+				var settings = jQuery.extend({}, home_GraphSettings);
+				settings.tooltipValueLookups = {
+					names: graphData[graphType].data[0].names
+				};
+				var $chart = $('[data-chart=' + graphType + '] .chart');
+				$chart.closest('.poolChart')
+					.show();
+				settings.tooltipFormat = graphData[graphType].data[1] ? '<span style="color:{{color}}">PROP: {{y}}</span> &ndash; {{offset:names}}' : '<span>{{y}}</span> &ndash; {{offset:names}}'
+				$chart.sparkline(graphData[graphType].data[0].values, settings);
+				if (graphData[graphType].data[1]) {
+					settings.composite = true
+					settings.lineColor = graphData[graphType].options.lineColor
+					settings.tooltipFormat = '<span style="color:orange">SOLO: {{y}}</span> &ndash; {{offset:names}}'
+					$chart.sparkline(graphData[graphType].data[1].values, settings);
+				}
+			}
+		}
+	}
 }
 
 // Get chart data
@@ -2291,15 +2318,19 @@ function home_InitTemplate(parentStats, siblingStats) {
 
 
     var totalFee = parentStats.config.fee;
+    var soloFee = parentStats.config.soloFee;
     if (Object.keys(parentStats.config.donation).length) {
         var totalDonation = 0;
         for(var i in parentStats.config.donation) {
             totalDonation += parentStats.config.donation[i];
         }
         totalFee += totalDonation;
+        soloFee += totalDonation;
     }
 
-    updateText('poolFee', (totalFee > 0 && totalFee != 100 ? floatToString(totalFee) : (totalFee == 100 ? '100' : '0')) + '%');
+    updateText('poolFee', (totalFee > 0 && totalFee != 100 ? floatToString(totalFee) : (totalFee == 100 ? '100' : '0')) + '%/' + soloFee + '%');
+
+    updateText('finderReward', parentStats.config.finderReward + '%');
 
     updateText('paymentsInterval', getReadableTime(parentStats.config.paymentsInterval));
     updateText('paymentsMinimum', getReadableCoin(parentStats, parentStats.config.minPaymentThreshold));

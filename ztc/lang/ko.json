@@ -14,6 +14,7 @@
     "you": "you",
     "statsUpdated": "업데이트",
     
+    "infoAlert" : "",
     "poolHashrate": "풀의 해시레이트",
     "currentEffort": "Current Effort",
     "networkHashrate": "네크워크 해시레이트",
@@ -22,6 +23,7 @@
     "networkLastReward": "최근 보상량",
     "poolMiners": "연결된 마이너수",
     "poolFee": "풀 수수료",
+    "finderReward": "파인더 보상",
     
     "minerStats": "마이너 상태와 지급상황",
     "workerStats": "워커 상태",

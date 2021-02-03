@@ -6,7 +6,17 @@
 </div>
 
 <script id="mainPoolTemplate" type="text/x-handlebars-template">
-<!-- Pool Hash Rate -->
+   
+    <!-- Information Alert -->
+    <div class="col-sm-12">
+        <br>
+            <div class="infoAlert">
+                <div class="text-center"><span data-tkey="infoAlert">N/A</span></div>
+            </div>
+        <br>
+    </div>
+    
+    <!-- Pool Hash Rate -->
     <div class="col-lg-3 col-sm-4">
         <div class="infoBox hoverExpandEffect">
             <div class="icon">
@@ -148,11 +158,24 @@
     <div class="col-lg-3 col-sm-4">
         <div class="infoBox hoverExpandEffect">
             <div class="icon">
-                <span class="fa fa-dollar"></span>
+                <span class="fa fa-percent"></span>
             </div>
             <div class="content">
-                <div class="text"><span data-tkey="poolFee">Pool Fee</span></div>
-                <div class="value"><span id="poolFee">N/A</span><sup>{{symbol}}</sup></div>
+                <div class="text"><span data-tkey="poolFee">Pool Fee</span> (PROP/SOLO)</div>
+                <div class="value"><span id="poolFee" class="smallText">N/A</span><sup>{{symbol}}</sup></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Finder Reward -->
+    <div class="col-lg-3 col-sm-4">
+        <div class="infoBox hoverExpandEffect">
+            <div class="icon">
+                <span class="fa fa-percent"></span>
+            </div>
+            <div class="content">
+                <div class="text"><span data-tkey="finderReward">Finder Reward</span></div>
+                <div class="value"><span id="finderReward">N/A</span><sup>{{symbol}}</sup></div>
             </div>
         </div>
     </div>
@@ -164,14 +187,14 @@
                 <span class="fa fa-dollar"></span>
             </div>
             <div class="content">
-                <div class="text"><span data-tkey="paymentsMinimum">Minimum Payout</span></div>
-                <div class="value"><span id="paymentsMinimum">N/A</span></div>
+                <div class="text"><span class="text" data-tkey="paymentsMinimum">Minimum Payout</span><span class="text"> : </span><span class="value2" id="paymentsMinimum">N/A</span></div>
+                <div class="text"><span class="text" data-tkey="paymentsInterval">Payment Interval</span><span class="text"> : </span><span class="value2" id="paymentsInterval">N/A</span></div>
             </div>
         </div>
     </div>
 
-    <!-- Payment Interval -->
-    <div class="col-lg-3 col-sm-4">
+   <!-- Payment Interval -->
+   <!--  <div class="col-lg-3 col-sm-4">
         <div class="infoBox hoverExpandEffect">
             <div class="icon">
                 <span class="fa fa-clock-o"></span>
@@ -181,7 +204,7 @@
                 <div class="value"><span id="paymentsInterval">N/A</span></div>
             </div>
         </div>
-    </div>
+    </div> -->    
 
     <!-- Last Hash -->
     <div class="col-sm-12">
