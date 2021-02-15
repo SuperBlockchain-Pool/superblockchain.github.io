@@ -73,5 +73,8 @@
   "message" : "Message",
   "social-networks" : "Social Networks",
   "donations" : "Donations",
-  "copyright" : "Copyright @ 2020 SuperBlockchain Pool Inc. All rights reserved."
+  "gdpr-accept" : "Ok, I agree",
+  "gdpr-privacy-policy" : "Privacy Policy",
+  "gdpr-message" : "We use our own and third-party cookies to obtain statistical data on the navigation of our users and improve our services. If you accept or continue browsing, we consider that you accept their use.",
+  "copyright" : "Copyright @ 2021 SuperBlockchain Pool Inc. All rights reserved."
 }
