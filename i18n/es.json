@@ -54,6 +54,8 @@
   "coin-6-info" : "Cirquity es una forma privada, rápida, segura y fácil de enviar dinero a amigos y empresas.",
   "coin-7-info" : "Zent Cash es una red global de pagos descentralizados, de código abierto, rápidos, anónimos y transparentes.",
   "coin-8-info" : "Nibble es una criptomoneda descentralizada, anonima, rápida y con la capacidad de enviar mensajes encriptados entre los usuarios de la misma red.",
+  "faucets-information-window" : "Un grifo es una aplicación o un sitio web que distribuye pequeñas cantidades de criptomonedas como recompensa por completar tareas tan simples como ver anuncios, ver videos de productos, completar cuestionarios, hacer clic en enlaces o completar un captcha.",
+  "web-miners-information-window" : "Usted puede minar criptomonedas directamente desde su navegador. Solamente seleccione la criptomoneda deseada de la lista, escriba la dirección de su billetera en el primer campo, seguidamente escriba el nombre de su minero empezando por un @ en el segundo campo y pulse en el botón start. ",
   "start-mining" : "Comenzar Mineria",
   "stats-data" : "Información Estadística de Piscinas",
   "active-miners" : "Mineros Activos",

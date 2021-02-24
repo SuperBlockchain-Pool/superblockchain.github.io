@@ -1,7 +1,7 @@
 var api = "https://superblockchain.con-ip.com:8151";
 let parentCoin = "Nibble"
 
-var email = "david@securitypc.es";
+var email = "superblockchain2018@gmail.com";
 var telegram = "https://t.me/joinchat/FGO99xKu_KNJCwCJcu3kow";
 var discord = "https://discord.gg/ANvE54E";
 var facebook = "https://www.facebook.com/superblockchainpool";
