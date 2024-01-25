@@ -1,4 +1,4 @@
-var api = "https://superblockchain.con-ip.com:8143";
+var api = "https://superblockchain.con-ip.com:14026";
 let parentCoin = "Cirquity"
 
 var email = "superblockchain2018@gmail.com";

@@ -1,4 +1,4 @@
-var api = "https://superblockchain.con-ip.com:8333";
+var api = "https://superblockchain.con-ip.com:9002";
 let parentCoin = "Qwertycoin";
 
 var email = "superblockchain2018@gmail.com";
@@ -9,9 +9,6 @@ var twitter = "https://twitter.com/SuperBlockchaim";
 var instagram = "https://www.instagram.com/superblockchain/";
 
 var marketCurrencies = ["{symbol}-BTC", "{symbol}-LTC", "{symbol}-DOGE", "{symbol}-USD"];
-
-var blockchainExplorer = "https://explorer.qwertycoin.org/?hash={id}#blockchain_block";
-var transactionExplorer = "https://explorer.qwertycoin.org/?hash={id}#blockchain_transaction";
 
 var themeCss = "themes/default.css";
 var defaultLang = 'en';

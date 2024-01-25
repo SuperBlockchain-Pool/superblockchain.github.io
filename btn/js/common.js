@@ -2110,67 +2110,40 @@ workerstats methods
 */
 
 let home_GraphSettings = {
-	type: 'line',
-	width: '100%',
-	height: '140',
-	lineColor: '#03a9f4',
-	fillColor: 'rgba(3, 169, 244, .4)',
-	spotColor: null,
-	minSpotColor: null,
-	maxSpotColor: null,
-	highlightLineColor: '#236d26',
-	spotRadius: 3,
-	chartRangeMin: 0,
-	drawNormalOnTop: false,
-	tooltipFormat: '<b>{{y}}</b> &ndash; {{offset:names}}'
+    type: 'line',
+    width: '100%',
+    height: '140',
+    lineColor: '#03a9f4',
+    fillColor: 'rgba(3, 169, 244, .4)',
+    spotColor: null,
+    minSpotColor: null,
+    maxSpotColor: null,
+    highlightLineColor: '#236d26',
+    spotRadius: 3,
+    chartRangeMin: 0,
+    drawNormalOnTop: false,
+    tooltipFormat: '<b>{{y}}</b> &ndash; {{offset:names}}'
 };
 
-function home_CreateCharts (data) {
-	if (data.hasOwnProperty("charts")) {
-		var graphData = {
-			hashrate: {
-				data: [home_GetGraphData(data.charts.hashrate), home_GetGraphData(data.charts.hashrateSolo)],
-				options: {
-					lineColor: 'orange'
-				}
-			},
-			diff: {
-				data: [home_GetGraphData(data.charts.difficulty)]
-			},
-			miners: {
-				data: [home_GetGraphData(data.charts.miners), home_GetGraphData(data.charts.minersSolo)],
-				options: {
-					lineColor: 'orange'
-				}
-			},
-			workers: {
-				data: [home_GetGraphData(data.charts.workers), home_GetGraphData(data.charts.workersSolo)],
-				options: {
-					lineColor: 'orange'
-				}
-			},
-		};
+function home_CreateCharts(data) {
+    if (data.hasOwnProperty("charts")) {
+        var graphData = {
+            hashrate: home_GetGraphData(data.charts.hashrate),
+            diff: home_GetGraphData(data.charts.difficulty),
+            miners: home_GetGraphData(data.charts.miners),
+            workers: home_GetGraphData(data.charts.workers)
+        };
 
-		for (var graphType in graphData) {
-			if (graphData[graphType].data[0].values.length > 1) {
-				var settings = jQuery.extend({}, home_GraphSettings);
-				settings.tooltipValueLookups = {
-					names: graphData[graphType].data[0].names
-				};
-				var $chart = $('[data-chart=' + graphType + '] .chart');
-				$chart.closest('.poolChart')
-					.show();
-				settings.tooltipFormat = graphData[graphType].data[1] ? '<span style="color:{{color}}">PROP: {{y}}</span> &ndash; {{offset:names}}' : '<span>{{y}}</span> &ndash; {{offset:names}}'
-				$chart.sparkline(graphData[graphType].data[0].values, settings);
-				if (graphData[graphType].data[1]) {
-					settings.composite = true
-					settings.lineColor = graphData[graphType].options.lineColor
-					settings.tooltipFormat = '<span style="color:orange">SOLO: {{y}}</span> &ndash; {{offset:names}}'
-					$chart.sparkline(graphData[graphType].data[1].values, settings);
-				}
-			}
-		}
-	}
+        for(var graphType in graphData) {
+            if(graphData[graphType].values.length > 1) {
+                var settings = jQuery.extend({}, home_GraphSettings);
+                settings.tooltipValueLookups = {names: graphData[graphType].names};
+                var $chart = $('[data-chart=' + graphType + '] .chart');
+                $chart.closest('.poolChart').show();
+                $chart.sparkline(graphData[graphType].values, settings);
+            }
+        }
+    }
 }
 
 // Get chart data

@@ -1,4 +1,4 @@
-var api = "https://superblockchain.con-ip.com:8161";
+var api = "https://superblockchain.con-ip.com:34002";
 let parentCoin = "Monero"
 
 var email = "superblockchain2018@gmail.com";

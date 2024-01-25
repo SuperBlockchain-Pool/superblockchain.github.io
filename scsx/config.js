@@ -1,4 +1,4 @@
-var api = "https://superblockchain.con-ip.com:8147";
+var api = "https://superblockchain.con-ip.com:14028";
 let parentCoin = "SecureCash"
 
 var email = "superblockchain2018@gmail.com";
