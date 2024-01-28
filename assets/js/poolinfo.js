@@ -54,29 +54,41 @@ function getPoolStats(poolID, poolURL) {
 
         if (cnAlgorithm == "cryptonight_light") {
             if (cnVariant === 1) {
-                algorithm = 'Cryptonight Light v7';
+                algorithm = 'CN Light v7';
             } else if (cnVariant === 2) {
-                algorithm = 'Cryptonight Light v7';
+                algorithm = 'CN Light v7';
             } else {
-                algorithm = 'Cryptonight Light';
+                algorithm = 'CN Light';
             }
         }
 	    else if (cnAlgorithm == "cryptonight_pico") {
-            algorithm = 'Cryptonight Turtle';
+            algorithm = 'CN Turtle';
+        }
+        else if (cnAlgorithm == "meme") {
+            algorithm = 'Memehash';
         }
         else if (cnAlgorithm == "cryptonight_heavy") {
-            algorithm = 'Cryptonight Heavy';
+            algorithm = 'CN Heavy';
         }
         else if (cnAlgorithm == "argon2") {
-            algorithm = 'Argon2id Chukwa';
+            algorithm = 'Chukwa';
+        }
+        else if (cnAlgorithm == "randomx") {
+            if (cnVariant === 2) {
+                algorithm = 'Random/ARQ';
+            } else if (cnVariant === 6) {
+                algorithm = 'Random/Nevo';
+            } else {
+                algorithm = 'RandomX';
+            }
         }
         else {
             if (cnVariant === 1) {
-                algorithm = 'Cryptonight v7';
+                algorithm = 'CN v7';
             } else if (cnVariant === 3) {
-                algorithm = 'Cryptonight v7';
+                algorithm = 'CN v7';
             } else if (cnVariant === 11) {
-                algorithm = 'Cryptonight Conceal';
+                algorithm = 'CN Conceal';
             } else {
                 algorithm = 'Cryptonight';
             }
@@ -94,7 +106,9 @@ function getPoolStats(poolID, poolURL) {
         updateText(poolID + '_hasheffort', hasheffort);
         updateText(poolID + '_blocksFound', blocksFound);
         updateText(poolID + '_poolBlockReward', poolBlockReward);
+        updateText(poolID + '_poolBlockReward_replicate', poolBlockReward);
         updateText(poolID + '_algorithm', algorithm);
+        updateText(poolID + '_algorithm_replicate', algorithm);
     });
 }
 
